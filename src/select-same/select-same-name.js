@@ -2,6 +2,8 @@
 
 const selectSame = require('./select-same')
 
-export default selectSame(function(selectedLayer, layer) {
-  return selectedLayer.name == layer.name
+export default selectSame({
+  shouldSelectLayer: function (selectedLayer, layer) {
+    return selectedLayer.name == layer.name
+  }
 })

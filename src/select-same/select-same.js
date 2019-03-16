@@ -7,7 +7,11 @@ const {
   showMessage
 } = require('sketch-plugin-helper')
 
-function selectSame (shouldSelectLayer) {
+function selectSame ({
+  shouldSelectLayer,
+  validateLayer,
+  invalidLayerMessage
+}) {
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length == 0) {
@@ -19,8 +23,16 @@ function selectSame (shouldSelectLayer) {
       return
     }
     const selectedLayer = selectedLayers[0]
+    if (validateLayer && !validateLayer(selectedLayer)) {
+      showMessage(invalidLayerMessage)
+      return
+    }
     iterateNestedLayers(getAllLayers(), function (layer) {
-      if (shouldSelectLayer(selectedLayer, layer)) {
+      if (
+        validateLayer &&
+        validateLayer(layer) &&
+        shouldSelectLayer(selectedLayer, layer)
+      ) {
         layer.selected = true
         return
       }

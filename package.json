@@ -42,8 +42,8 @@
         "label": "Select Shape Layers"
       },
       {
-        "handler": "select-by-type/select-symbols",
-        "label": "Select Symbols"
+        "handler": "select-by-type/select-symbol-instances",
+        "label": "Select Symbol Instances"
       },
       {
         "handler": "select-by-type/select-slices",
@@ -57,6 +57,14 @@
       {
         "handler": "select-same/select-same-name",
         "label": "Select Same Name"
+      },
+      {
+        "handler": "select-same/select-same-style",
+        "label": "Select Same Style"
+      },
+      {
+        "handler": "select-same/select-same-symbol-instance",
+        "label": "Select Same Symbol Instance"
       }
     ],
     "defaults": {
