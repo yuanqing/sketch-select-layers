@@ -1,0 +1,67 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "sketch-plugin-helper": "/Users/yuanqing/Desktop/Git/sketch-plugin-helper"
+  },
+  "scripts": {
+    "build": "sph build --dev",
+    "fix": "sph lint --fix",
+    "link": "sph link",
+    "lint": "sph lint",
+    "unlink": "sph unlink",
+    "version": "sph version",
+    "watch": "sph build --watch"
+  },
+  "sketch-plugin-helper": {
+    "pluginName": "Selector",
+    "pluginDescription": "A Sketch plugin for changing the selection based on type, name, and similarity",
+    "authorName": "Lim Yuan Qing",
+    "githubUserName": "yuanqing",
+    "githubRepositoryName": "sketch-selector",
+    "menu": [
+      {
+        "handler": "select-by-name",
+        "label": "Select By Name"
+      },
+      "-",
+      {
+        "handler": "select-artboards",
+        "label": "Select Artboards"
+      },
+      {
+        "handler": "select-groups",
+        "label": "Select Groups"
+      },
+      {
+        "handler": "select-text-layers",
+        "label": "Select Text Layers"
+      },
+      {
+        "handler": "select-shape-layers",
+        "label": "Select Shape Layers"
+      },
+      {
+        "handler": "select-symbols",
+        "label": "Select Symbols"
+      },
+      {
+        "handler": "select-slices",
+        "label": "Select Slices"
+      },
+      {
+        "handler": "select-hotspots",
+        "label": "Select Hotspots"
+      },
+      "-",
+      {
+        "handler": "select-same-name",
+        "label": "Select Same Name"
+      }
+    ],
+    "defaults": {
+      "selectByName.layerName": "",
+      "selectByName.exactMatch": "true"
+    }
+  }
+}

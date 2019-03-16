@@ -1,0 +1,83 @@
+{
+  "name": "Selector",
+  "description": "A Sketch plugin for changing the selection based on type, name, and similarity",
+  "author": "Lim Yuan Qing",
+  "homepage": "https://github.com/yuanqing/sketch-selector",
+  "version": "0.1.0",
+  "identifier": "yuanqing.sketch-selector",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-selector/master/appcast.xml",
+  "bundleVersion": 1,
+  "disableCocoaScriptPreprocessor": true,
+  "commands": [
+    {
+      "name": "Select By Name",
+      "identifier": "yuanqing.sketch-selector.select-by-name",
+      "script": "plugin.js",
+      "handler": "select-by-name"
+    },
+    {
+      "name": "Select Artboards",
+      "identifier": "yuanqing.sketch-selector.select-artboards",
+      "script": "plugin.js",
+      "handler": "select-artboards"
+    },
+    {
+      "name": "Select Groups",
+      "identifier": "yuanqing.sketch-selector.select-groups",
+      "script": "plugin.js",
+      "handler": "select-groups"
+    },
+    {
+      "name": "Select Text Layers",
+      "identifier": "yuanqing.sketch-selector.select-text-layers",
+      "script": "plugin.js",
+      "handler": "select-text-layers"
+    },
+    {
+      "name": "Select Shape Layers",
+      "identifier": "yuanqing.sketch-selector.select-shape-layers",
+      "script": "plugin.js",
+      "handler": "select-shape-layers"
+    },
+    {
+      "name": "Select Symbols",
+      "identifier": "yuanqing.sketch-selector.select-symbols",
+      "script": "plugin.js",
+      "handler": "select-symbols"
+    },
+    {
+      "name": "Select Slices",
+      "identifier": "yuanqing.sketch-selector.select-slices",
+      "script": "plugin.js",
+      "handler": "select-slices"
+    },
+    {
+      "name": "Select Hotspots",
+      "identifier": "yuanqing.sketch-selector.select-hotspots",
+      "script": "plugin.js",
+      "handler": "select-hotspots"
+    },
+    {
+      "name": "Select Same Name",
+      "identifier": "yuanqing.sketch-selector.select-same-name",
+      "script": "plugin.js",
+      "handler": "select-same-name"
+    }
+  ],
+  "menu": {
+    "title": "Selector",
+    "items": [
+      "yuanqing.sketch-selector.select-by-name",
+      "-",
+      "yuanqing.sketch-selector.select-artboards",
+      "yuanqing.sketch-selector.select-groups",
+      "yuanqing.sketch-selector.select-text-layers",
+      "yuanqing.sketch-selector.select-shape-layers",
+      "yuanqing.sketch-selector.select-symbols",
+      "yuanqing.sketch-selector.select-slices",
+      "yuanqing.sketch-selector.select-hotspots",
+      "-",
+      "yuanqing.sketch-selector.select-same-name"
+    ]
+  }
+}
