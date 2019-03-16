@@ -1,13 +1,13 @@
 /* eslint-disable eqeqeq */
 
 const {
-  getSelectedOrAllLayers,
+  getAllLayers,
   iterateNestedLayers,
   openUserInputDialog,
   saveUserInput,
   showMessage,
-  TEXT_BOX,
-  CHECK_BOX
+  CHECK_BOX,
+  TEXT_BOX
 } = require('sketch-plugin-helper')
 
 const userInputConfig = {
@@ -38,7 +38,7 @@ export default function () {
       : layerName
   )
   let hasSelection = false
-  iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
+  iterateNestedLayers(getAllLayers(), function (layer) {
     if (regularExpression.test(layer.name)) {
       layer.selected = true
       hasSelection = true

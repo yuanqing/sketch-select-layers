@@ -26,36 +26,36 @@
       },
       "-",
       {
-        "handler": "select-artboards",
+        "handler": "select-by-type/select-artboards",
         "label": "Select Artboards"
       },
       {
-        "handler": "select-groups",
+        "handler": "select-by-type/select-groups",
         "label": "Select Groups"
       },
       {
-        "handler": "select-text-layers",
+        "handler": "select-by-type/select-text-layers",
         "label": "Select Text Layers"
       },
       {
-        "handler": "select-shape-layers",
+        "handler": "select-by-type/select-shape-layers",
         "label": "Select Shape Layers"
       },
       {
-        "handler": "select-symbols",
+        "handler": "select-by-type/select-symbols",
         "label": "Select Symbols"
       },
       {
-        "handler": "select-slices",
+        "handler": "select-by-type/select-slices",
         "label": "Select Slices"
       },
       {
-        "handler": "select-hotspots",
+        "handler": "select-by-type/select-hotspots",
         "label": "Select Hotspots"
       },
       "-",
       {
-        "handler": "select-same-name",
+        "handler": "select-same/select-same-name",
         "label": "Select Same Name"
       }
     ],

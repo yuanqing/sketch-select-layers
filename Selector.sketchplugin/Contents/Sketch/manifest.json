@@ -19,49 +19,49 @@
       "name": "Select Artboards",
       "identifier": "yuanqing.sketch-selector.select-artboards",
       "script": "plugin.js",
-      "handler": "select-artboards"
+      "handler": "select-by-type/select-artboards"
     },
     {
       "name": "Select Groups",
       "identifier": "yuanqing.sketch-selector.select-groups",
       "script": "plugin.js",
-      "handler": "select-groups"
+      "handler": "select-by-type/select-groups"
     },
     {
       "name": "Select Text Layers",
       "identifier": "yuanqing.sketch-selector.select-text-layers",
       "script": "plugin.js",
-      "handler": "select-text-layers"
+      "handler": "select-by-type/select-text-layers"
     },
     {
       "name": "Select Shape Layers",
       "identifier": "yuanqing.sketch-selector.select-shape-layers",
       "script": "plugin.js",
-      "handler": "select-shape-layers"
+      "handler": "select-by-type/select-shape-layers"
     },
     {
       "name": "Select Symbols",
       "identifier": "yuanqing.sketch-selector.select-symbols",
       "script": "plugin.js",
-      "handler": "select-symbols"
+      "handler": "select-by-type/select-symbols"
     },
     {
       "name": "Select Slices",
       "identifier": "yuanqing.sketch-selector.select-slices",
       "script": "plugin.js",
-      "handler": "select-slices"
+      "handler": "select-by-type/select-slices"
     },
     {
       "name": "Select Hotspots",
       "identifier": "yuanqing.sketch-selector.select-hotspots",
       "script": "plugin.js",
-      "handler": "select-hotspots"
+      "handler": "select-by-type/select-hotspots"
     },
     {
       "name": "Select Same Name",
       "identifier": "yuanqing.sketch-selector.select-same-name",
       "script": "plugin.js",
-      "handler": "select-same-name"
+      "handler": "select-same/select-same-name"
     }
   ],
   "menu": {
