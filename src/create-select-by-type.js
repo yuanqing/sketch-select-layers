@@ -10,7 +10,6 @@ function createSelectByType ({ type, label }) {
   return function () {
     let hasSelection = false
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
-      console.log(layer)
       if (layer.type == type) {
         layer.selected = true
         hasSelection = true
