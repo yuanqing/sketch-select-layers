@@ -5,7 +5,7 @@
     "sketch-plugin-helper": "/Users/yuanqing/Desktop/Git/sketch-plugin-helper"
   },
   "scripts": {
-    "build": "sph build --dev",
+    "build": "sph build",
     "fix": "sph lint --fix",
     "link": "sph link",
     "lint": "sph lint",
