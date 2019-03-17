@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-
 const {
   getSelectedOrAllLayers,
   iterateNestedLayers,
@@ -12,14 +10,14 @@ const {
 } = require('sketch-plugin-helper')
 
 const mapTypeLabelToType = {
-  'Artboard': 'Artboard',
-  'Group': 'Group',
+  Artboard: 'Artboard',
+  Group: 'Group',
   'Text Layer': 'Text',
   'Shape Layer': 'ShapePath',
   'Symbol Instance': 'SymbolInstance',
-  'Image': 'Image',
-  'Slice': 'Slice',
-  'Hotspot': 'HotSpot'
+  Image: 'Image',
+  Slice: 'Slice',
+  Hotspot: 'HotSpot'
 }
 
 const userInputConfig = {
@@ -39,10 +37,7 @@ const userInputConfig = {
       key: 'selectByName.type',
       label: 'Type',
       type: DROP_DOWN,
-      possibleValues: [
-        'Any',
-        ...Object.keys(mapTypeLabelToType)
-      ]
+      possibleValues: ['Any', ...Object.keys(mapTypeLabelToType)]
     }
   ]
 }
