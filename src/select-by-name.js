@@ -45,9 +45,10 @@ const userInputConfig = {
 
 function selectByName () {
   const userInput = openUserInputDialog(userInputConfig)
-  if (userInput) {
-    saveUserInput(userInput)
+  if (!userInput) {
+    return
   }
+  saveUserInput(userInput)
   const layerName = userInput['selectByName.layerName']
   const regularExpression = new RegExp(
     userInput['selectByName.exactMatch'] == 'true'
