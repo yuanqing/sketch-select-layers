@@ -1,6 +1,6 @@
 const selectByType = require('./select-by-type')
 
 module.exports = selectByType({
-  type: 'SymbolInstance',
-  label: 'symbols'
+  type: 'Image',
+  label: 'images'
 })

@@ -2,20 +2,20 @@
   "private": true,
   "version": "0.1.0",
   "devDependencies": {
-    "sketch-plugin-helper": "/Users/yuanqing/Desktop/Git/sketch-plugin-helper"
+    "sketch-plugin-helper": "*"
   },
   "scripts": {
     "build": "sph build",
     "fix": "sph lint --fix",
-    "link": "sph link",
     "lint": "sph lint",
-    "unlink": "sph unlink",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
     "pluginName": "Selector",
-    "pluginDescription": "A Sketch plugin for changing the selection based on type, name, and similarity",
+    "pluginDescription": "A Sketch plugin for manipulating the selection based on type, name, and similarity",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
     "githubRepositoryName": "sketch-selector",
@@ -44,6 +44,10 @@
       {
         "handler": "select-by-type/select-symbol-instances",
         "label": "Select Symbol Instances"
+      },
+      {
+        "handler": "select-by-type/select-images",
+        "label": "Select Images"
       },
       {
         "handler": "select-by-type/select-slices",

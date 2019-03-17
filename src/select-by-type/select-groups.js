@@ -1,6 +1,6 @@
 const selectByType = require('./select-by-type')
 
-export default selectByType({
+module.exports = selectByType({
   type: 'Group',
   label: 'groups'
 })

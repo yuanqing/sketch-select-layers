@@ -40,6 +40,12 @@
       "handler": "select-by-type/select-shape-layers"
     },
     {
+      "name": "Select Images",
+      "identifier": "yuanqing.sketch-selector.select-images",
+      "script": "plugin.js",
+      "handler": "select-by-type/select-images"
+    },
+    {
       "name": "Select Symbol Instances",
       "identifier": "yuanqing.sketch-selector.select-symbol-instances",
       "script": "plugin.js",
@@ -85,6 +91,7 @@
       "yuanqing.sketch-selector.select-groups",
       "yuanqing.sketch-selector.select-text-layers",
       "yuanqing.sketch-selector.select-shape-layers",
+      "yuanqing.sketch-selector.select-images",
       "yuanqing.sketch-selector.select-symbol-instances",
       "yuanqing.sketch-selector.select-slices",
       "yuanqing.sketch-selector.select-hotspots",

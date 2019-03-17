@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-
 const {
   getSelectedOrAllLayers,
   iterateNestedLayers,

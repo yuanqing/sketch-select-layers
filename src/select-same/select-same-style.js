@@ -1,14 +1,13 @@
-/* eslint-disable eqeqeq */
-
 const selectSame = require('./select-same')
 
-export default selectSame({
+module.exports = selectSame({
   shouldSelectLayer: function (selectedLayer, layer) {
     return selectedLayer.sharedStyleId == layer.sharedStyleId
   },
   validateLayer: function (layer) {
+    const type = layer.type
     return (
-      (layer.type === 'Text' || layer.type === 'ShapePath') &&
+      (type == 'Text' || type == 'ShapePath') &&
       typeof layer.sharedStyleId != 'undefined'
     )
   },
