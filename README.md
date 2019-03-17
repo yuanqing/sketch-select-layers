@@ -24,10 +24,10 @@
   - Hotspot
 - Filters the selected layers, or makes a selection from layers on the current page if the selection is empty
 
-### Select By Similarity
+### Select Same
 
-- Selects layers that are similar to the selected layer
-- Similarity can be based on:
+- Selects layers that are the same as the selected layer
+- Equivalence can be based on one of:
   - Name
   - Text Style or Layer Style
   - Symbol Instance
