@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
@@ -72,7 +72,7 @@
       }
     ],
     "defaults": {
-      "selectByName.layerName": "",
+      "selectByName.layerName": "Rectangle",
       "selectByName.exactMatch": "true",
       "selectByName.type": "Any"
     }
