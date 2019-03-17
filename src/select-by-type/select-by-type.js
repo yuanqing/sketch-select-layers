@@ -4,7 +4,7 @@ const {
   showMessage
 } = require('sketch-plugin-helper')
 
-function createSelectByType ({ type, label }) {
+function selectByType ({ type, label }) {
   return function () {
     let hasSelection = false
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
@@ -19,4 +19,4 @@ function createSelectByType ({ type, label }) {
   }
 }
 
-module.exports = createSelectByType
+module.exports = selectByType
