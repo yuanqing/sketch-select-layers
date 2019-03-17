@@ -3,7 +3,7 @@
   "description": "A Sketch plugin for manipulating the selection based on name, type, and similarity",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-selector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "identifier": "yuanqing.sketch-selector",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-selector/master/appcast.xml",
   "bundleVersion": 1,
