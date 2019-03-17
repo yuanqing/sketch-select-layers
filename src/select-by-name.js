@@ -9,15 +9,16 @@ const {
   TEXT_BOX
 } = require('sketch-plugin-helper')
 
+// prettier-ignore
 const mapTypeLabelToType = {
-  Artboard: 'Artboard',
-  Group: 'Group',
+  'Artboard': 'Artboard',
+  'Group': 'Group',
   'Text Layer': 'Text',
   'Shape Layer': 'ShapePath',
   'Symbol Instance': 'SymbolInstance',
-  Image: 'Image',
-  Slice: 'Slice',
-  Hotspot: 'HotSpot'
+  'Image': 'Image',
+  'Slice': 'Slice',
+  'Hotspot': 'HotSpot'
 }
 
 const userInputConfig = {
