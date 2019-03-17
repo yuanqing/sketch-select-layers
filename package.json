@@ -73,7 +73,8 @@
     ],
     "defaults": {
       "selectByName.layerName": "",
-      "selectByName.exactMatch": "true"
+      "selectByName.exactMatch": "true",
+      "selectByName.type": "Any"
     }
   }
 }

@@ -1,14 +1,26 @@
 /* eslint-disable eqeqeq */
 
 const {
-  getAllLayers,
+  getSelectedOrAllLayers,
   iterateNestedLayers,
   openUserInputDialog,
   saveUserInput,
   showMessage,
   CHECK_BOX,
+  DROP_DOWN,
   TEXT_BOX
 } = require('sketch-plugin-helper')
+
+const mapTypeLabelToType = {
+  'Artboard': 'Artboard',
+  'Group': 'Group',
+  'Text Layer': 'Text',
+  'Shape Layer': 'ShapePath',
+  'Symbol Instance': 'SymbolInstance',
+  'Image': 'Image',
+  'Slice': 'Slice',
+  'Hotspot': 'HotSpot'
+}
 
 const userInputConfig = {
   title: 'Select By Name',
@@ -22,11 +34,20 @@ const userInputConfig = {
       key: 'selectByName.exactMatch',
       label: 'Exact match',
       type: CHECK_BOX
+    },
+    {
+      key: 'selectByName.type',
+      label: 'Type',
+      type: DROP_DOWN,
+      possibleValues: [
+        'Any',
+        ...Object.keys(mapTypeLabelToType)
+      ]
     }
   ]
 }
 
-export default function () {
+function selectByName () {
   const userInput = openUserInputDialog(userInputConfig)
   if (userInput) {
     saveUserInput(userInput)
@@ -37,8 +58,12 @@ export default function () {
       ? `^${layerName}$`
       : layerName
   )
+  const type = userInput['selectByName.type']
   let hasSelection = false
-  iterateNestedLayers(getAllLayers(), function (layer) {
+  iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
+    if (type != 'All' && layer.type != mapTypeLabelToType[type]) {
+      return
+    }
     if (regularExpression.test(layer.name)) {
       layer.selected = true
       hasSelection = true
@@ -48,3 +73,5 @@ export default function () {
   })
   showMessage(hasSelection ? 'Selected' : 'Nothing selected')
 }
+
+module.exports = selectByName
