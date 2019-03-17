@@ -15,7 +15,7 @@
   },
   "sketch-plugin-helper": {
     "pluginName": "Selector",
-    "pluginDescription": "A Sketch plugin for manipulating the selection based on type, name, and similarity",
+    "pluginDescription": "A Sketch plugin for manipulating the selection based on name, type, and similarity",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
     "githubRepositoryName": "sketch-selector",
@@ -72,7 +72,7 @@
       }
     ],
     "defaults": {
-      "selectByName.layerName": "Rectangle",
+      "selectByName.layerName": "",
       "selectByName.exactMatch": "true",
       "selectByName.type": "Any"
     }
