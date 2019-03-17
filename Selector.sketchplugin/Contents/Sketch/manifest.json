@@ -1,6 +1,6 @@
 {
   "name": "Selector",
-  "description": "A Sketch plugin for manipulating the selection based on type, name, and similarity",
+  "description": "A Sketch plugin for manipulating the selection based on name, type, and similarity",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-selector",
   "version": "0.1.0",
