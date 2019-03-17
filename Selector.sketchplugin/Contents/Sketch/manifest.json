@@ -1,6 +1,6 @@
 {
   "name": "Selector",
-  "description": "A Sketch plugin for changing the selection based on type, name, and similarity",
+  "description": "A Sketch plugin for manipulating the selection based on type, name, and similarity",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-selector",
   "version": "0.1.0",
@@ -40,16 +40,16 @@
       "handler": "select-by-type/select-shape-layers"
     },
     {
-      "name": "Select Images",
-      "identifier": "yuanqing.sketch-selector.select-images",
-      "script": "plugin.js",
-      "handler": "select-by-type/select-images"
-    },
-    {
       "name": "Select Symbol Instances",
       "identifier": "yuanqing.sketch-selector.select-symbol-instances",
       "script": "plugin.js",
       "handler": "select-by-type/select-symbol-instances"
+    },
+    {
+      "name": "Select Images",
+      "identifier": "yuanqing.sketch-selector.select-images",
+      "script": "plugin.js",
+      "handler": "select-by-type/select-images"
     },
     {
       "name": "Select Slices",
@@ -91,8 +91,8 @@
       "yuanqing.sketch-selector.select-groups",
       "yuanqing.sketch-selector.select-text-layers",
       "yuanqing.sketch-selector.select-shape-layers",
-      "yuanqing.sketch-selector.select-images",
       "yuanqing.sketch-selector.select-symbol-instances",
+      "yuanqing.sketch-selector.select-images",
       "yuanqing.sketch-selector.select-slices",
       "yuanqing.sketch-selector.select-hotspots",
       "-",
