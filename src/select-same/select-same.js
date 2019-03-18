@@ -15,7 +15,7 @@ function selectSame ({
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length == 0) {
-      showErrorMessage('Select a layer')
+      showErrorMessage('Select one layer')
       return
     }
     if (selectedLayers.length > 1) {
@@ -23,7 +23,7 @@ function selectSame ({
       return
     }
     const selectedLayer = selectedLayers[0]
-    if (validateLayer && !validateLayer(selectedLayer)) {
+    if (!validateLayer(selectedLayer)) {
       showErrorMessage(invalidLayerMessage)
       return
     }
@@ -32,21 +32,20 @@ function selectSame ({
       if (layer.selected) {
         return
       }
-      if (
-        (validateLayer && !validateLayer(layer)) ||
-        !shouldSelectLayer(selectedLayer, layer)
-      ) {
-        layer.selected = false
+      if (validateLayer(layer) && shouldSelectLayer(selectedLayer, layer)) {
+        layer.selected = true
+        count++
         return
       }
-      layer.selected = true
-      count++
+      layer.selected = false
     })
     if (count == 0) {
-      showWarningMessage('No new layers selected')
+      showWarningMessage('No additional layers selected')
       return
     }
-    showSuccessMessage(`Selected ${count} ${count == 1 ? 'layer' : 'layers'}`)
+    showSuccessMessage(
+      `Selected ${count} additional ${count == 1 ? 'layer' : 'layers'}`
+    )
   }
 }
 

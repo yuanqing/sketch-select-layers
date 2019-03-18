@@ -18,7 +18,7 @@ function selectByType ({ key, value, label }) {
     })
     const pluralisedLabel = `${label}s`
     if (count == 0) {
-      showWarningMessage(`No ${pluralisedLabel} selected`)
+      showWarningMessage(`No ${pluralisedLabel} found`)
       return
     }
     showSuccessMessage(

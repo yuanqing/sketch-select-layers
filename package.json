@@ -68,7 +68,7 @@
       },
       {
         "handler": "select-same/select-same-style",
-        "label": "Select Same Style"
+        "label": "Select Same Layer Style or Text Style"
       },
       {
         "handler": "select-same/select-same-symbol-instance",

@@ -59,22 +59,32 @@ function selectByName () {
   const type = userInput['selectByName.type']
   let count = 0
   iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
-    if (
-      (type == 'Hidden' && !layer.hidden) ||
-      (type != 'All' && layer.type != mapTypeLabelToType[type]) ||
-      !regularExpression.test(layer.name)
-    ) {
-      layer.selected = false
+    if (shouldSelectLayer({ layer, type, regularExpression })) {
+      layer.selected = true
+      count++
       return
     }
-    layer.selected = true
-    count++
+    layer.selected = false
   })
   if (count == 0) {
     showWarningMessage('Nothing selected')
     return
   }
   showSuccessMessage(`Selected ${count} ${count == 1 ? 'layer' : 'layers'}`)
+}
+
+function shouldSelectLayer ({ layer, type, regularExpression }) {
+  if (type == 'Hidden' && !layer.hidden) {
+    return false
+  }
+  if (
+    type != 'Any' &&
+    type != 'Hidden' &&
+    layer.type != mapTypeLabelToType[type]
+  ) {
+    return false
+  }
+  return regularExpression.test(layer.name)
 }
 
 module.exports = selectByName

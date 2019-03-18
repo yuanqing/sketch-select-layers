@@ -7,5 +7,5 @@ module.exports = selectSame({
   validateLayer: function (layer) {
     return layer.type == 'SymbolInstance'
   },
-  invalidLayerMessage: 'Select a symbol'
+  invalidLayerMessage: 'Select a symbol instance'
 })

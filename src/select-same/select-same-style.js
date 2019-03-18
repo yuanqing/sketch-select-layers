@@ -11,5 +11,5 @@ module.exports = selectSame({
       typeof layer.sharedStyleId != 'undefined'
     )
   },
-  invalidLayerMessage: 'Select a layer with a Text or Layer Style'
+  invalidLayerMessage: 'Select a layer with a layer style or text style'
 })
