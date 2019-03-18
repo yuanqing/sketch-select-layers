@@ -14,11 +14,11 @@
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
-    "pluginName": "Selector",
+    "pluginName": "Select Layers",
     "pluginDescription": "A Sketch plugin for changing or creating a selection of layers based on name, type or similarity",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
-    "githubRepositoryName": "sketch-selector",
+    "githubRepositoryName": "sketch-select-layers",
     "menu": [
       {
         "handler": "select-by-name",
