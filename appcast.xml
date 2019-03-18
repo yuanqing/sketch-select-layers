@@ -3,7 +3,7 @@
   <channel>
     <title>Selector</title>
     <link>https://raw.githubusercontent.com/yuanqing/sketch-selector/master/appcast.xml</link>
-    <description>A Sketch plugin for manipulating the selection based on name, type, and similarity</description>
+    <description>A Sketch plugin for changing or creating a selection of layers based on name, type and sameness</description>
     <language>en</language>
     <item>
       <title>v0.1.2</title>
