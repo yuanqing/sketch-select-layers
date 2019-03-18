@@ -3,7 +3,8 @@ const {
   iterateNestedLayers,
   openUserInputDialog,
   saveUserInput,
-  showMessage,
+  showSuccessMessage,
+  showWarningMessage,
   CHECK_BOX,
   DROP_DOWN,
   TEXT_BOX
@@ -56,22 +57,24 @@ function selectByName () {
       : layerName
   )
   const type = userInput['selectByName.type']
-  let hasSelection = false
+  let count = 0
   iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
-    if (type == 'Hidden' && layer.hidden == false) {
+    if (
+      (type == 'Hidden' && !layer.hidden) ||
+      (type != 'All' && layer.type != mapTypeLabelToType[type]) ||
+      !regularExpression.test(layer.name)
+    ) {
+      layer.selected = false
       return
     }
-    if (type != 'All' && layer.type != mapTypeLabelToType[type]) {
-      return
-    }
-    if (regularExpression.test(layer.name)) {
-      layer.selected = true
-      hasSelection = true
-      return
-    }
-    layer.selected = false
+    layer.selected = true
+    count++
   })
-  showMessage(hasSelection ? 'Selected' : 'Nothing selected')
+  if (count == 0) {
+    showWarningMessage('Nothing selected')
+    return
+  }
+  showSuccessMessage(`Selected ${count} ${count == 1 ? 'layer' : 'layers'}`)
 }
 
 module.exports = selectByName

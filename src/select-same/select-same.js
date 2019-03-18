@@ -2,7 +2,9 @@ const {
   getAllLayers,
   getSelectedLayers,
   iterateNestedLayers,
-  showMessage
+  showErrorMessage,
+  showSuccessMessage,
+  showWarningMessage
 } = require('sketch-plugin-helper')
 
 function selectSame ({
@@ -13,30 +15,38 @@ function selectSame ({
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length == 0) {
-      showMessage('Select a layer')
+      showErrorMessage('Select a layer')
       return
     }
     if (selectedLayers.length > 1) {
-      showMessage('Select only one layer')
+      showErrorMessage('Select only one layer')
       return
     }
     const selectedLayer = selectedLayers[0]
     if (validateLayer && !validateLayer(selectedLayer)) {
-      showMessage(invalidLayerMessage)
+      showErrorMessage(invalidLayerMessage)
       return
     }
+    let count = 0
     iterateNestedLayers(getAllLayers(), function (layer) {
-      if (
-        validateLayer &&
-        validateLayer(layer) &&
-        shouldSelectLayer(selectedLayer, layer)
-      ) {
-        layer.selected = true
+      if (layer.selected) {
         return
       }
-      layer.selected = false
+      if (
+        (validateLayer && !validateLayer(layer)) ||
+        !shouldSelectLayer(selectedLayer, layer)
+      ) {
+        layer.selected = false
+        return
+      }
+      layer.selected = true
+      count++
     })
-    showMessage('Selected')
+    if (count == 0) {
+      showWarningMessage('No new layers selected')
+      return
+    }
+    showSuccessMessage(`Selected ${count} ${count == 1 ? 'layer' : 'layers'}`)
   }
 }
 

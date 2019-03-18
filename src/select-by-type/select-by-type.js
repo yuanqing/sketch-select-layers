@@ -1,21 +1,29 @@
 const {
   getSelectedOrAllLayers,
   iterateNestedLayers,
-  showMessage
+  showWarningMessage,
+  showSuccessMessage
 } = require('sketch-plugin-helper')
 
 function selectByType ({ key, value, label }) {
   return function () {
-    let hasSelection = false
+    let count = 0
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
       if (layer[key] == value) {
         layer.selected = true
-        hasSelection = true
+        count++
         return
       }
       layer.selected = false
     })
-    showMessage(hasSelection ? `Selected ${label}` : `No ${label} selected`)
+    const pluralisedLabel = `${label}s`
+    if (count == 0) {
+      showWarningMessage(`No ${pluralisedLabel} selected`)
+      return
+    }
+    showSuccessMessage(
+      `Selected ${count} ${count == 1 ? label : pluralisedLabel}`
+    )
   }
 }
 
