@@ -1,6 +1,7 @@
 const selectByType = require('./select-by-type')
 
 module.exports = selectByType({
-  type: 'Slice',
+  key: 'type',
+  value: 'Slice',
   label: 'slices'
 })

@@ -38,7 +38,7 @@ const userInputConfig = {
       key: 'selectByName.type',
       label: 'Type',
       type: DROP_DOWN,
-      possibleValues: ['Any', ...Object.keys(mapTypeLabelToType)]
+      possibleValues: ['Any', ...Object.keys(mapTypeLabelToType), 'Hidden']
     }
   ]
 }
@@ -58,6 +58,9 @@ function selectByName () {
   const type = userInput['selectByName.type']
   let hasSelection = false
   iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
+    if (type == 'Hidden' && layer.hidden == false) {
+      return
+    }
     if (type != 'All' && layer.type != mapTypeLabelToType[type]) {
       return
     }

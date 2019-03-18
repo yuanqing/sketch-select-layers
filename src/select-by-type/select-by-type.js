@@ -4,11 +4,11 @@ const {
   showMessage
 } = require('sketch-plugin-helper')
 
-function selectByType ({ type, label }) {
+function selectByType ({ key, value, label }) {
   return function () {
     let hasSelection = false
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
-      if (layer.type == type) {
+      if (layer[key] == value) {
         layer.selected = true
         hasSelection = true
         return

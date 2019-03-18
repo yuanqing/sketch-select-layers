@@ -64,6 +64,12 @@
       "handler": "select-by-type/select-hotspots"
     },
     {
+      "name": "Select Hidden Layers",
+      "identifier": "yuanqing.sketch-selector.select-hidden-layers",
+      "script": "plugin.js",
+      "handler": "select-by-type/select-hidden-layers"
+    },
+    {
       "name": "Select Same Name",
       "identifier": "yuanqing.sketch-selector.select-same-name",
       "script": "plugin.js",
@@ -95,6 +101,7 @@
       "yuanqing.sketch-selector.select-images",
       "yuanqing.sketch-selector.select-slices",
       "yuanqing.sketch-selector.select-hotspots",
+      "yuanqing.sketch-selector.select-hidden-layers",
       "-",
       "yuanqing.sketch-selector.select-same-name",
       "yuanqing.sketch-selector.select-same-style",

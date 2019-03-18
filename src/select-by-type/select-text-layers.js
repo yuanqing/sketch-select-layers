@@ -1,6 +1,7 @@
 const selectByType = require('./select-by-type')
 
 module.exports = selectByType({
-  type: 'Text',
+  key: 'type',
+  value: 'Text',
   label: 'text layers'
 })

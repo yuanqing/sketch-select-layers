@@ -1,6 +1,7 @@
 const selectByType = require('./select-by-type')
 
 module.exports = selectByType({
-  type: 'HotSpot',
+  key: 'type',
+  value: 'HotSpot',
   label: 'hotspots'
 })

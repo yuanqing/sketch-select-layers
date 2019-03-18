@@ -57,6 +57,10 @@
         "handler": "select-by-type/select-hotspots",
         "label": "Select Hotspots"
       },
+      {
+        "handler": "select-by-type/select-hidden-layers",
+        "label": "Select Hidden Layers"
+      },
       "-",
       {
         "handler": "select-same/select-same-name",
