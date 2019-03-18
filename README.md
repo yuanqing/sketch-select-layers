@@ -1,6 +1,6 @@
 # sketch-selector
 
-> A Sketch plugin for changing or creating a selection of layers based on name, type and sameness
+> A Sketch plugin for changing or creating a selection of layers based on name, type or similarity
 
 ## Usage
 
@@ -8,7 +8,7 @@
 
 - Selects layers that match a given name or regular expression
 - Filters the selected layers, or makes a new selection of layers on the current page if the selection is empty
-- Can be additionally configured to match one particular layer type
+- Can be optionally configured to match one particular layer type
 
 ### Select By Type
 
@@ -30,7 +30,7 @@
   - Name
   - Text Style or Layer Style
   - Symbol Instance
-- Exactly one layer must be selected before running this command
+- Exactly one layer must be selected before executing this command
 
 ## Installation
 
