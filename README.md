@@ -1,19 +1,18 @@
 # sketch-selector
 
-> A Sketch plugin for manipulating the selection based on name, type, and similarity
+> A Sketch plugin for changing or creating a selection of layers based on name, type and sameness
 
 ## Usage
 
 ### Select By Name
 
-- Selects layers that match a given layer name or regular expression
-- Filters the selected layers, or makes a selection from layers on the current page if the selection is empty
-- Can be configured to perform an exact match, or match a specific layer type
+- Selects layers that match a given name or regular expression
+- Filters the selected layers, or makes a new selection of layers on the current page if the selection is empty
+- Can be additionally configured to match one particular layer type
 
 ### Select By Type
 
-- Selects layers of a given type
-- Type can be one of:
+- Selects layers of one particular type:
   - Artboard
   - Group
   - Text Layer
@@ -22,15 +21,16 @@
   - Image
   - Slice
   - Hotspot
-- Filters the selected layers, or makes a selection from layers on the current page if the selection is empty
+  - Hidden
+- Filters the selected layers, or makes a new selection of layers on the current page if the selection is empty
 
 ### Select Same
 
-- Selects layers that are the same as the selected layer
-- Equivalence can be based on one of:
+- Selects layers that have one particular attribute that is the same as the one selected layer:
   - Name
   - Text Style or Layer Style
   - Symbol Instance
+- Exactly one layer must be selected before running this command
 
 ## Installation
 
