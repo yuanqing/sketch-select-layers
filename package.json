@@ -15,7 +15,7 @@
   },
   "sketch-plugin-helper": {
     "pluginName": "Select Layers",
-    "pluginDescription": "A Sketch plugin for changing or creating a selection of layers based on name, type or similarity",
+    "pluginDescription": "A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
     "githubRepositoryName": "sketch-select-layers",

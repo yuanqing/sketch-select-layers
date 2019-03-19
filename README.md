@@ -1,14 +1,14 @@
 # sketch-select-layers
 
-> A Sketch plugin for changing or creating a selection of layers based on name, type or similarity
+> A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity
 
 ## Usage
 
 ### Select By Name
 
 - Selects layers that match a given name or regular expression
-- Filters the selected layers, or makes a new selection of layers on the current page if the selection is empty
-- Can be optionally configured to match one particular layer type
+- Filters the selected layers, or creates a new selection of layers if the selection is empty
+- Can be configured to match one particular layer type
 
 ### Select By Type
 
@@ -22,7 +22,7 @@
   - Slice
   - Hotspot
   - Hidden
-- Filters the selected layers, or makes a new selection of layers on the current page if the selection is empty
+- Filters the selected layers, or creates a new selection of layers if the selection is empty
 
 ### Select Same
 
