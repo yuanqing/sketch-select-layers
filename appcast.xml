@@ -6,6 +6,11 @@
     <description>A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity</description>
     <language>en</language>
     <item>
+      <title>v0.3.0</title>
+      <description>0.3.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-select-layers/archive/v0.3.0.zip" sparkle:version="0.3.0"/>
+    </item>
+    <item>
       <title>v0.2.2</title>
       <description>0.2.2</description>
       <enclosure url="https://github.com/yuanqing/sketch-select-layers/archive/v0.2.2.zip" sparkle:version="0.2.2"/>
