@@ -1,4 +1,4 @@
-const {
+import {
   getSelectedOrAllLayers,
   iterateNestedLayers,
   openUserInputDialog,
@@ -8,7 +8,7 @@ const {
   CHECK_BOX,
   DROP_DOWN,
   TEXT_BOX
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
 // prettier-ignore
 const mapTypeLabelToType = {
@@ -44,7 +44,7 @@ const userInputConfig = {
   ]
 }
 
-function selectByName () {
+export default function selectByName () {
   const userInput = openUserInputDialog(userInputConfig)
   if (!userInput) {
     return
@@ -86,5 +86,3 @@ function shouldSelectLayer ({ layer, type, regularExpression }) {
   }
   return regularExpression.test(layer.name)
 }
-
-module.exports = selectByName

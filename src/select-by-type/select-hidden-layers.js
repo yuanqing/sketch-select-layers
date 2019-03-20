@@ -1,6 +1,6 @@
-const selectByType = require('./select-by-type')
+import selectByType from './select-by-type'
 
-module.exports = selectByType({
+export default selectByType({
   key: 'hidden',
   value: true,
   label: 'hidden layer'

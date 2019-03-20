@@ -1,6 +1,6 @@
-const selectByType = require('./select-by-type')
+import selectByType from './select-by-type'
 
-module.exports = selectByType({
+export default selectByType({
   key: 'type',
   value: 'Slice',
   label: 'slice'

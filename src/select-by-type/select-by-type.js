@@ -1,11 +1,11 @@
-const {
+import {
   getSelectedOrAllLayers,
   iterateNestedLayers,
   showWarningMessage,
   showSuccessMessage
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
-function selectByType ({ key, value, label }) {
+export default function selectByType ({ key, value, label }) {
   return function () {
     let count = 0
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
@@ -26,5 +26,3 @@ function selectByType ({ key, value, label }) {
     )
   }
 }
-
-module.exports = selectByType

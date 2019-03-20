@@ -1,6 +1,6 @@
-const selectSame = require('./select-same')
+import selectSame from './select-same'
 
-module.exports = selectSame({
+export default selectSame({
   shouldSelectLayer: function (selectedLayer, layer) {
     return selectedLayer.symbolId == layer.symbolId
   },

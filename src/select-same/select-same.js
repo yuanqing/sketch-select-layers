@@ -1,13 +1,13 @@
-const {
+import {
   getAllLayers,
   getSelectedLayers,
   iterateNestedLayers,
   showErrorMessage,
   showSuccessMessage,
   showWarningMessage
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
-function selectSame ({
+export default function selectSame ({
   shouldSelectLayer,
   validateLayer,
   invalidLayerMessage
@@ -48,5 +48,3 @@ function selectSame ({
     )
   }
 }
-
-module.exports = selectSame
