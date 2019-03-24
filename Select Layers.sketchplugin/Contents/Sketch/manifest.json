@@ -86,6 +86,12 @@
       "identifier": "yuanqing.sketch-select-layers.select-same.attributes.symbol-instance",
       "script": "plugin.js",
       "handler": "select-same/attributes/symbol-instance"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "yuanqing.sketch-select-layers.reset-settings",
+      "script": "plugin.js",
+      "handler": "reset-settings"
     }
   ],
   "menu": {
@@ -105,7 +111,9 @@
       "-",
       "yuanqing.sketch-select-layers.select-same.attributes.name",
       "yuanqing.sketch-select-layers.select-same.attributes.style",
-      "yuanqing.sketch-select-layers.select-same.attributes.symbol-instance"
+      "yuanqing.sketch-select-layers.select-same.attributes.symbol-instance",
+      "-",
+      "yuanqing.sketch-select-layers.reset-settings"
     ]
   }
 }
