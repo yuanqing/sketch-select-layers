@@ -80,7 +80,7 @@ function shouldSelectLayer ({ layer, type, regularExpression }) {
   if (
     type !== 'Any' &&
     type !== 'Hidden' &&
-    layer.type != mapTypeLabelToType[type]
+    layer.type !== mapTypeLabelToType[type]
   ) {
     return false
   }
