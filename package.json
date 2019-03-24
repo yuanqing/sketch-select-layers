@@ -76,8 +76,8 @@
       }
     ],
     "defaultSettings": {
-      "selectByName.layerName": "",
       "selectByName.exactMatch": "true",
+      "selectByName.layerName": "",
       "selectByName.type": "Any"
     }
   }
