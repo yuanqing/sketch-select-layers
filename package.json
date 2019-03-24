@@ -73,6 +73,11 @@
       {
         "handler": "select-same/attributes/symbol-instance",
         "label": "Select Same Symbol Instance"
+      },
+      "-",
+      {
+        "handler": "reset-settings",
+        "label": "Reset Settings"
       }
     ],
     "defaultSettings": {
