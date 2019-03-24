@@ -1,10 +1,10 @@
 import {
   getSelectedOrAllLayers,
   iterateNestedLayers,
-  openUserInputDialog,
-  saveUserInput,
+  openSettingsDialog,
+  saveTemporarySettings,
+  showMessage,
   showSuccessMessage,
-  showWarningMessage,
   CHECK_BOX,
   DROP_DOWN,
   TEXT_BOX
@@ -22,41 +22,41 @@ const mapTypeLabelToType = {
   'Hotspot': 'HotSpot'
 }
 
-const userInputConfig = {
+const settingsConfig = {
   title: 'Select By Name',
   inputs: [
     {
+      type: TEXT_BOX,
       key: 'selectByName.layerName',
-      label: 'Layer name',
-      type: TEXT_BOX
+      label: 'Layer name'
     },
     {
+      type: CHECK_BOX,
       key: 'selectByName.exactMatch',
-      label: 'Exact match',
-      type: CHECK_BOX
+      label: 'Exact match'
     },
     {
+      type: DROP_DOWN,
       key: 'selectByName.type',
       label: 'Type',
-      type: DROP_DOWN,
       possibleValues: ['Any', ...Object.keys(mapTypeLabelToType), 'Hidden']
     }
   ]
 }
 
 export default function selectByName () {
-  const userInput = openUserInputDialog(userInputConfig)
-  if (!userInput) {
+  const settings = openSettingsDialog(settingsConfig)
+  if (!settings) {
     return
   }
-  saveUserInput(userInput)
-  const layerName = userInput['selectByName.layerName']
+  saveTemporarySettings(settings)
+  const layerName = settings['selectByName.layerName']
   const regularExpression = new RegExp(
-    userInput['selectByName.exactMatch'] == 'true'
+    settings['selectByName.exactMatch'] === 'true'
       ? `^${layerName}$`
       : layerName
   )
-  const type = userInput['selectByName.type']
+  const type = settings['selectByName.type']
   let count = 0
   iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
     if (shouldSelectLayer({ layer, type, regularExpression })) {
@@ -66,20 +66,20 @@ export default function selectByName () {
     }
     layer.selected = false
   })
-  if (count == 0) {
-    showWarningMessage('Nothing selected')
+  if (count === 0) {
+    showMessage('Nothing selected')
     return
   }
-  showSuccessMessage(`Selected ${count} ${count == 1 ? 'layer' : 'layers'}`)
+  showSuccessMessage(`Selected ${count} ${count === 1 ? 'layer' : 'layers'}`)
 }
 
 function shouldSelectLayer ({ layer, type, regularExpression }) {
-  if (type == 'Hidden' && !layer.hidden) {
+  if (type === 'Hidden' && !layer.hidden) {
     return false
   }
   if (
-    type != 'Any' &&
-    type != 'Hidden' &&
+    type !== 'Any' &&
+    type !== 'Hidden' &&
     layer.type != mapTypeLabelToType[type]
   ) {
     return false

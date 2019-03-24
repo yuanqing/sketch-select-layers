@@ -1,7 +1,7 @@
 import {
   getSelectedOrAllLayers,
   iterateNestedLayers,
-  showWarningMessage,
+  showMessage,
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
@@ -9,7 +9,7 @@ export default function selectByType ({ key, value, label }) {
   return function () {
     let count = 0
     iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
-      if (layer[key] == value) {
+      if (layer[key] === value) {
         layer.selected = true
         count++
         return
@@ -17,12 +17,12 @@ export default function selectByType ({ key, value, label }) {
       layer.selected = false
     })
     const pluralisedLabel = `${label}s`
-    if (count == 0) {
-      showWarningMessage(`No ${pluralisedLabel} found`)
+    if (count === 0) {
+      showMessage(`No ${pluralisedLabel} found`)
       return
     }
     showSuccessMessage(
-      `Selected ${count} ${count == 1 ? label : pluralisedLabel}`
+      `Selected ${count} ${count === 1 ? label : pluralisedLabel}`
     )
   }
 }

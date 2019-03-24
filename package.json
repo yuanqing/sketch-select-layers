@@ -26,56 +26,56 @@
       },
       "-",
       {
-        "handler": "select-by-type/select-artboards",
+        "handler": "select-by-type/types/artboard",
         "label": "Select Artboards"
       },
       {
-        "handler": "select-by-type/select-groups",
+        "handler": "select-by-type/types/group",
         "label": "Select Groups"
       },
       {
-        "handler": "select-by-type/select-text-layers",
-        "label": "Select Text Layers"
-      },
-      {
-        "handler": "select-by-type/select-shape-layers",
+        "handler": "select-by-type/types/shape-layer",
         "label": "Select Shape Layers"
       },
       {
-        "handler": "select-by-type/select-symbol-instances",
+        "handler": "select-by-type/types/text-layer",
+        "label": "Select Text Layers"
+      },
+      {
+        "handler": "select-by-type/types/symbol-instance",
         "label": "Select Symbol Instances"
       },
       {
-        "handler": "select-by-type/select-images",
+        "handler": "select-by-type/types/image",
         "label": "Select Images"
       },
       {
-        "handler": "select-by-type/select-slices",
+        "handler": "select-by-type/types/slice",
         "label": "Select Slices"
       },
       {
-        "handler": "select-by-type/select-hotspots",
+        "handler": "select-by-type/types/hotspot",
         "label": "Select Hotspots"
       },
       {
-        "handler": "select-by-type/select-hidden-layers",
+        "handler": "select-by-type/types/hidden-layer",
         "label": "Select Hidden Layers"
       },
       "-",
       {
-        "handler": "select-same/select-same-name",
+        "handler": "select-same/attributes/name",
         "label": "Select Same Name"
       },
       {
-        "handler": "select-same/select-same-style",
+        "handler": "select-same/attributes/style",
         "label": "Select Same Layer Style or Text Style"
       },
       {
-        "handler": "select-same/select-same-symbol-instance",
+        "handler": "select-same/attributes/symbol-instance",
         "label": "Select Same Symbol Instance"
       }
     ],
-    "defaults": {
+    "defaultSettings": {
       "selectByName.layerName": "",
       "selectByName.exactMatch": "true",
       "selectByName.type": "Any"

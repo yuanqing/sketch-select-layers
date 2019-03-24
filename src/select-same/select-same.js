@@ -3,23 +3,23 @@ import {
   getSelectedLayers,
   iterateNestedLayers,
   showErrorMessage,
-  showSuccessMessage,
-  showWarningMessage
+  showMessage,
+  showSuccessMessage
 } from 'sketch-plugin-helper'
 
 export default function selectSame ({
-  shouldSelectLayer,
   validateLayer,
+  shouldSelectLayer,
   invalidLayerMessage
 }) {
   return function () {
     const selectedLayers = getSelectedLayers()
-    if (selectedLayers.length == 0) {
-      showErrorMessage('Select one layer')
+    if (selectedLayers.length === 0) {
+      showErrorMessage('Select 1 layer')
       return
     }
     if (selectedLayers.length > 1) {
-      showErrorMessage('Select only one layer')
+      showErrorMessage('Select only 1 layer')
       return
     }
     const selectedLayer = selectedLayers[0]
@@ -39,12 +39,12 @@ export default function selectSame ({
       }
       layer.selected = false
     })
-    if (count == 0) {
-      showWarningMessage('No additional layers selected')
+    if (count === 0) {
+      showMessage('No additional layers selected')
       return
     }
     showSuccessMessage(
-      `Selected ${count} additional ${count == 1 ? 'layer' : 'layers'}`
+      `Selected ${count} additional ${count === 1 ? 'layer' : 'layers'}`
     )
   }
 }

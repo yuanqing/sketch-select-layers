@@ -17,75 +17,75 @@
     },
     {
       "name": "Select Artboards",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-artboards",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.artboard",
       "script": "plugin.js",
-      "handler": "select-by-type/select-artboards"
+      "handler": "select-by-type/types/artboard"
     },
     {
       "name": "Select Groups",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-groups",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.group",
       "script": "plugin.js",
-      "handler": "select-by-type/select-groups"
-    },
-    {
-      "name": "Select Text Layers",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-text-layers",
-      "script": "plugin.js",
-      "handler": "select-by-type/select-text-layers"
+      "handler": "select-by-type/types/group"
     },
     {
       "name": "Select Shape Layers",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-shape-layers",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.shape-layer",
       "script": "plugin.js",
-      "handler": "select-by-type/select-shape-layers"
+      "handler": "select-by-type/types/shape-layer"
+    },
+    {
+      "name": "Select Text Layers",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.text-layer",
+      "script": "plugin.js",
+      "handler": "select-by-type/types/text-layer"
     },
     {
       "name": "Select Symbol Instances",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-symbol-instances",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.symbol-instance",
       "script": "plugin.js",
-      "handler": "select-by-type/select-symbol-instances"
+      "handler": "select-by-type/types/symbol-instance"
     },
     {
       "name": "Select Images",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-images",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.image",
       "script": "plugin.js",
-      "handler": "select-by-type/select-images"
+      "handler": "select-by-type/types/image"
     },
     {
       "name": "Select Slices",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-slices",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.slice",
       "script": "plugin.js",
-      "handler": "select-by-type/select-slices"
+      "handler": "select-by-type/types/slice"
     },
     {
       "name": "Select Hotspots",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-hotspots",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.hotspot",
       "script": "plugin.js",
-      "handler": "select-by-type/select-hotspots"
+      "handler": "select-by-type/types/hotspot"
     },
     {
       "name": "Select Hidden Layers",
-      "identifier": "yuanqing.sketch-select-layers.select-by-type.select-hidden-layers",
+      "identifier": "yuanqing.sketch-select-layers.select-by-type.types.hidden-layer",
       "script": "plugin.js",
-      "handler": "select-by-type/select-hidden-layers"
+      "handler": "select-by-type/types/hidden-layer"
     },
     {
       "name": "Select Same Name",
-      "identifier": "yuanqing.sketch-select-layers.select-same.select-same-name",
+      "identifier": "yuanqing.sketch-select-layers.select-same.attributes.name",
       "script": "plugin.js",
-      "handler": "select-same/select-same-name"
+      "handler": "select-same/attributes/name"
     },
     {
       "name": "Select Same Layer Style or Text Style",
-      "identifier": "yuanqing.sketch-select-layers.select-same.select-same-style",
+      "identifier": "yuanqing.sketch-select-layers.select-same.attributes.style",
       "script": "plugin.js",
-      "handler": "select-same/select-same-style"
+      "handler": "select-same/attributes/style"
     },
     {
       "name": "Select Same Symbol Instance",
-      "identifier": "yuanqing.sketch-select-layers.select-same.select-same-symbol-instance",
+      "identifier": "yuanqing.sketch-select-layers.select-same.attributes.symbol-instance",
       "script": "plugin.js",
-      "handler": "select-same/select-same-symbol-instance"
+      "handler": "select-same/attributes/symbol-instance"
     }
   ],
   "menu": {
@@ -93,19 +93,19 @@
     "items": [
       "yuanqing.sketch-select-layers.select-by-name",
       "-",
-      "yuanqing.sketch-select-layers.select-by-type.select-artboards",
-      "yuanqing.sketch-select-layers.select-by-type.select-groups",
-      "yuanqing.sketch-select-layers.select-by-type.select-text-layers",
-      "yuanqing.sketch-select-layers.select-by-type.select-shape-layers",
-      "yuanqing.sketch-select-layers.select-by-type.select-symbol-instances",
-      "yuanqing.sketch-select-layers.select-by-type.select-images",
-      "yuanqing.sketch-select-layers.select-by-type.select-slices",
-      "yuanqing.sketch-select-layers.select-by-type.select-hotspots",
-      "yuanqing.sketch-select-layers.select-by-type.select-hidden-layers",
+      "yuanqing.sketch-select-layers.select-by-type.types.artboard",
+      "yuanqing.sketch-select-layers.select-by-type.types.group",
+      "yuanqing.sketch-select-layers.select-by-type.types.shape-layer",
+      "yuanqing.sketch-select-layers.select-by-type.types.text-layer",
+      "yuanqing.sketch-select-layers.select-by-type.types.symbol-instance",
+      "yuanqing.sketch-select-layers.select-by-type.types.image",
+      "yuanqing.sketch-select-layers.select-by-type.types.slice",
+      "yuanqing.sketch-select-layers.select-by-type.types.hotspot",
+      "yuanqing.sketch-select-layers.select-by-type.types.hidden-layer",
       "-",
-      "yuanqing.sketch-select-layers.select-same.select-same-name",
-      "yuanqing.sketch-select-layers.select-same.select-same-style",
-      "yuanqing.sketch-select-layers.select-same.select-same-symbol-instance"
+      "yuanqing.sketch-select-layers.select-same.attributes.name",
+      "yuanqing.sketch-select-layers.select-same.attributes.style",
+      "yuanqing.sketch-select-layers.select-same.attributes.symbol-instance"
     ]
   }
 }

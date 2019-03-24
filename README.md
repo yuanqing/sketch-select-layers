@@ -15,8 +15,8 @@
 - Selects layers of one particular type:
   - Artboard
   - Group
-  - Text Layer
   - Shape Layer
+  - Text Layer
   - Symbol Instance
   - Image
   - Slice
@@ -26,9 +26,9 @@
 
 ### Select Same
 
-- Selects layers that have one particular attribute that is the same as the one selected layer:
+- Selects layers with one particular attribute that is the same as the one selected layer:
   - Name
-  - Text Style or Layer Style
+  - Layer Style or Text Style
   - Symbol Instance
 - Exactly one layer must be selected before executing this command
 
