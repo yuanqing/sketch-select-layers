@@ -52,7 +52,7 @@ export default function selectByName () {
   saveTemporarySettings(settings)
   const layerName = settings['selectByName.layerName']
   const regularExpression = new RegExp(
-    settings['selectByName.exactMatch'] === 'true'
+    settings['selectByName.exactMatch']
       ? `^${layerName}$`
       : layerName
   )
