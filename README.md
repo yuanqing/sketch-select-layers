@@ -1,4 +1,4 @@
-# sketch-select-layers
+# Select Layers
 
 > A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity
 
@@ -34,8 +34,8 @@
 
 ## Installation
 
-1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-select-layers/releases)
-2. Double-click `Select Layers.sketchplugin` to install.
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-select-layers/releases)
+2. Double-click `Select Layers.sketchplugin` to install
 
 ## License
 
