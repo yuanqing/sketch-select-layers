@@ -3,7 +3,7 @@
   "description": "A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-select-layers",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "identifier": "yuanqing.sketch-select-layers",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-select-layers/master/appcast.xml",
   "bundleVersion": 1,
