@@ -1,5 +1,5 @@
 import {
-  getAllLayers,
+  getLayersOnCurrentPage,
   getSelectedLayers,
   iterateNestedLayers,
   showErrorMessage,
@@ -28,7 +28,7 @@ export default function selectSame ({
       return
     }
     let count = 0
-    iterateNestedLayers(getAllLayers(), function (layer) {
+    iterateNestedLayers(getLayersOnCurrentPage(), function (layer) {
       if (layer.selected) {
         return
       }

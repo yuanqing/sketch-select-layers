@@ -1,5 +1,5 @@
 import {
-  getSelectedOrAllLayers,
+  getSelectedLayersOrLayersOnCurrentPage,
   iterateNestedLayers,
   openSettingsDialog,
   saveTemporarySettings,
@@ -58,7 +58,7 @@ export default function selectByName () {
   )
   const type = settings['selectByName.type']
   let count = 0
-  iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
+  iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (layer) {
     if (shouldSelectLayer({ layer, type, regularExpression })) {
       layer.selected = true
       count++

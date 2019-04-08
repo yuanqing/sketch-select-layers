@@ -1,5 +1,5 @@
 import {
-  getSelectedOrAllLayers,
+  getSelectedLayersOrLayersOnCurrentPage,
   iterateNestedLayers,
   showMessage,
   showSuccessMessage
@@ -8,7 +8,7 @@ import {
 export default function selectByType ({ key, value, label }) {
   return function () {
     let count = 0
-    iterateNestedLayers(getSelectedOrAllLayers(), function (layer) {
+    iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (layer) {
       if (layer[key] === value) {
         layer.selected = true
         count++
