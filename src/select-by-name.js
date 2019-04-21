@@ -50,15 +50,14 @@ export default function selectByName () {
     return
   }
   saveTemporarySettings(settings)
-  const layerName = settings['selectByName.layerName']
+  const { layerName, exactMatch, type } = settings.selectByName
   const regularExpression = new RegExp(
-    settings['selectByName.exactMatch']
-      ? `^${layerName}$`
-      : layerName
+    exactMatch ? `^${layerName}$` : layerName
   )
-  const type = settings['selectByName.type']
   let count = 0
-  iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (layer) {
+  iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (
+    layer
+  ) {
     if (shouldSelectLayer({ layer, type, regularExpression })) {
       layer.selected = true
       count++
