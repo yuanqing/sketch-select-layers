@@ -2,7 +2,9 @@
 
 > A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity
 
-## Usage
+![Dialog](media/dialog.png)
+
+## Commands
 
 ### Select By Name
 
