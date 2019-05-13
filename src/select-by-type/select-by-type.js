@@ -1,6 +1,6 @@
 import {
   getSelectedLayersOrLayersOnCurrentPage,
-  iterateNestedLayers,
+  iterateChildLayers,
   showMessage,
   showSuccessMessage
 } from 'sketch-plugin-helper'
@@ -8,7 +8,7 @@ import {
 export default function selectByType ({ key, value, label }) {
   return function () {
     let count = 0
-    iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (
+    iterateChildLayers(getSelectedLayersOrLayersOnCurrentPage(), function (
       layer
     ) {
       if (layer[key] === value) {

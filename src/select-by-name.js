@@ -1,6 +1,6 @@
 import {
   getSelectedLayersOrLayersOnCurrentPage,
-  iterateNestedLayers,
+  iterateChildLayers,
   openSettingsDialog,
   saveTemporarySettings,
   showMessage,
@@ -55,7 +55,7 @@ export default function selectByName () {
     exactMatch ? `^${layerName}$` : layerName
   )
   let count = 0
-  iterateNestedLayers(getSelectedLayersOrLayersOnCurrentPage(), function (
+  iterateChildLayers(getSelectedLayersOrLayersOnCurrentPage(), function (
     layer
   ) {
     if (shouldSelectLayer({ layer, type, regularExpression })) {
