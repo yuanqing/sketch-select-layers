@@ -24,7 +24,7 @@ const mapTypeLabelToType = {
 
 const settingsConfig = {
   title: 'Select By Name',
-  inputs: [
+  formFields: [
     {
       type: TEXT_BOX,
       key: 'selectByName.layerName',

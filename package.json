@@ -14,13 +14,16 @@
     "src"
   ],
   "scripts": {
-    "build": "sph build",
-    "fix": "sph lint --fix",
-    "lint": "sph lint",
-    "symlink": "sph symlink",
-    "unlink": "sph symlink --delete",
-    "version": "sph version",
-    "watch": "sph build --watch"
+    "build": "sketch build",
+    "fix": "sketch lint --fix",
+    "handler": "sketch handler",
+    "lint": "sketch lint",
+    "script": "sketch script",
+    "symlink": "sketch symlink",
+    "test": "sketch test",
+    "unlink": "sketch symlink --delete",
+    "version": "sketch version",
+    "watch": "sketch build --watch"
   },
   "devDependencies": {
     "sketch-plugin-helper": "*"
@@ -30,62 +33,62 @@
     "menu": [
       {
         "handler": "select-by-name",
-        "label": "Select By Name"
+        "name": "Select By Name"
       },
       "-",
       {
         "handler": "select-by-type/types/artboard",
-        "label": "Select Artboards"
+        "name": "Select Artboards"
       },
       {
         "handler": "select-by-type/types/group",
-        "label": "Select Groups"
+        "name": "Select Groups"
       },
       {
         "handler": "select-by-type/types/shape-layer",
-        "label": "Select Shape Layers"
+        "name": "Select Shape Layers"
       },
       {
         "handler": "select-by-type/types/text-layer",
-        "label": "Select Text Layers"
+        "name": "Select Text Layers"
       },
       {
         "handler": "select-by-type/types/symbol-instance",
-        "label": "Select Symbol Instances"
+        "name": "Select Symbol Instances"
       },
       {
         "handler": "select-by-type/types/image",
-        "label": "Select Images"
+        "name": "Select Images"
       },
       {
         "handler": "select-by-type/types/slice",
-        "label": "Select Slices"
+        "name": "Select Slices"
       },
       {
         "handler": "select-by-type/types/hotspot",
-        "label": "Select Hotspots"
+        "name": "Select Hotspots"
       },
       {
         "handler": "select-by-type/types/hidden-layer",
-        "label": "Select Hidden Layers"
+        "name": "Select Hidden Layers"
       },
       "-",
       {
         "handler": "select-same/attributes/name",
-        "label": "Select Same Name"
+        "name": "Select Same Name"
       },
       {
         "handler": "select-same/attributes/style",
-        "label": "Select Same Layer Style or Text Style"
+        "name": "Select Same Layer Style or Text Style"
       },
       {
         "handler": "select-same/attributes/symbol-instance",
-        "label": "Select Same Symbol Instance"
+        "name": "Select Same Symbol Instance"
       },
       "-",
       {
         "handler": "reset-settings",
-        "label": "Reset Settings"
+        "name": "Reset Settings"
       }
     ],
     "defaultSettings": {
