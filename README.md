@@ -1,4 +1,4 @@
-# Select Layers
+# Select Layers [![npm Version](https://badgen.net/npm/v/sketch-select-layers)](https://www.npmjs.org/package/sketch-select-layers)
 
 > A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity
 
