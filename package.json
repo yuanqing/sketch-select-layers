@@ -1,7 +1,7 @@
 {
   "name": "sketch-select-layers",
   "version": "0.5.0",
-  "description": "A Sketch plugin for creating or filtering a selection of layers based on name, type or similarity",
+  "description": "A Sketch plugin to create or filter a selection of layers based on name, type or similarity",
   "keywords": [
     "plugin",
     "sketch",
