@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Select Layers</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-select-layers/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-select-layers/.appcast.xml</link>
     <description>A Sketch plugin to create or filter a selection of layers based on name, type or similarity</description>
     <language>en</language>
     <item>
